@@ -174,6 +174,10 @@ Build → Run
 
 Screenshot
 
+List
+
 <img width="1080" height="2400" alt="Screenshot_20251213_004705" src="https://github.com/user-attachments/assets/24038045-6ded-4d66-96d5-c682ac44dffb" />
+
+Detail Page
 
 <img width="1080" height="2400" alt="Screenshot_20251213_004734" src="https://github.com/user-attachments/assets/6e776423-cf3d-472a-9500-9a4015e3b9bc" />
