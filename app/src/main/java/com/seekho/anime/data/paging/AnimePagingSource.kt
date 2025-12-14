@@ -18,8 +18,8 @@ class AnimePagingSource(private val api: ApiService) : PagingSource<Int, Anime>(
                     title = it.title,
                     episodes = it.episodes,
                     rating = it.score,
-                    imageUrl = it.images?.get("jpg")?.image_url ?: "",
-                    synopsis = it.synopsis ?: "")
+                    imageUrl = it.images?.jpg?.image_url ?: ""
+                )
             }
             val nextKey = if (resp.pagination?.has_next_page == true) page + 1 else null
             LoadResult.Page(items, prevKey = if (page == 1) null else page - 1, nextKey = nextKey)

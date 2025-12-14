@@ -8,6 +8,9 @@ val colorBackground = Color(color = 0xFFEEF3F8)
 val AppBarLight = Color(0xFF0E9BA4)
 val AppBarDark = Color(0xFF066A73)
 
+val AppBarDarkOpacity = Color(0xFF80066A73)
+
+
 // Background
 val BackgroundLight = Color(0xFFEEF3F8)
 val BackgroundDark = Color(0xFF121212)

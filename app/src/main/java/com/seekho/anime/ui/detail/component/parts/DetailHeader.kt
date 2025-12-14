@@ -13,9 +13,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.seekho.anime.domain.model.Anime
+import com.seekho.anime.domain.model.AnimeDetail
 
 @Composable
-fun DetailHeader(anime: Anime?) {
+fun DetailHeader(anime: AnimeDetail?) {
 
     Box(
         modifier = Modifier

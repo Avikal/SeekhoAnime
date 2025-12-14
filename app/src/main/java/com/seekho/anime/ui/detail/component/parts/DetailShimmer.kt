@@ -25,13 +25,15 @@ fun DetailShimmer() {
                 .placeholder(visible = true, highlight = PlaceholderHighlight.shimmer())
         ) {}
 
-        Spacer(modifier = Modifier.height(16.dp))
+        repeat(3) {
+            Spacer(modifier = Modifier.height(16.dp))
 
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(80.dp)
-                .placeholder(visible = true, highlight = PlaceholderHighlight.shimmer())
-        ) {}
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(80.dp)
+                    .placeholder(visible = true, highlight = PlaceholderHighlight.shimmer())
+            ) {}
+        }
     }
 }

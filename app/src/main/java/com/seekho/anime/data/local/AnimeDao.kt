@@ -13,4 +13,11 @@ interface AnimeDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(list: List<AnimeEntity>)
+
+    // DETAIL
+    @Query("SELECT * FROM anime_detail WHERE id = :id")
+    suspend fun getDetail(id: Int): AnimeDetailEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertDetail(entity: AnimeDetailEntity)
 }

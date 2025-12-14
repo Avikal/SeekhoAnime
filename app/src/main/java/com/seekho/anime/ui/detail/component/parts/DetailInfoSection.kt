@@ -10,10 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.seekho.anime.domain.model.Anime
+import com.seekho.anime.domain.model.AnimeDetail
 
 @Composable
 fun DetailInfoSection(
-    anime: Anime?,
+    anime: AnimeDetail?,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -40,12 +41,8 @@ fun DetailInfoSection(
         Spacer(modifier = Modifier.height(16.dp))
 
         // --- Dynamic Scrollable Synopsis ---
-        val scrollState = rememberScrollState()
-
         Column(
             modifier = Modifier
-                .weight(1f)                // 🎯 <-- dynamic height
-                .verticalScroll(scrollState)
         ) {
             Text(
                 text = "Synopsis",

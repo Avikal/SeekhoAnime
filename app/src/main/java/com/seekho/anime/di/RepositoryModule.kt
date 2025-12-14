@@ -1,5 +1,6 @@
 package com.seekho.anime.di
 
+import com.seekho.anime.common.network.NetworkChecker
 import com.seekho.anime.data.local.AnimeDao
 import com.seekho.anime.data.remote.ApiService
 import com.seekho.anime.data.repository.AnimeRepositoryImpl
@@ -15,6 +16,10 @@ import javax.inject.Singleton
 object RepositoryModule {
     @Provides
     @Singleton
-    fun provideAnimeRepository(api: ApiService, dao: AnimeDao): AnimeRepository =
-        AnimeRepositoryImpl(api, dao)
+    fun provideAnimeRepository(
+        api: ApiService,
+        dao: AnimeDao,
+        networkChecker: NetworkChecker
+    ): AnimeRepository =
+        AnimeRepositoryImpl(api, dao, networkChecker)
 }

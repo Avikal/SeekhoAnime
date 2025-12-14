@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.seekho.anime.common.Resource
 import com.seekho.anime.domain.model.Anime
+import com.seekho.anime.domain.model.AnimeDetail
 import com.seekho.anime.domain.usecase.GetAnimeDetailsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,7 +14,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-data class DetailState(val isLoading: Boolean = false, val anime: Anime? = null, val error: String? = null)
+data class DetailState(val isLoading: Boolean = false, val anime: AnimeDetail? = null, val error: String? = null)
 
 @HiltViewModel
 class AnimeDetailViewModel @Inject constructor(private val getAnimeDetailsUseCase: GetAnimeDetailsUseCase) : ViewModel() {

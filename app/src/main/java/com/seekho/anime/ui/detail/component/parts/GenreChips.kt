@@ -13,7 +13,9 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun GenreChips(genres: List<String>) {
-    Row(modifier = Modifier.horizontalScroll(rememberScrollState())) {
+    Row(modifier = Modifier
+        .padding(start = 16.dp, end = 8.dp)
+        .horizontalScroll(rememberScrollState())) {
         genres.forEach { genre ->
             AssistChip(
                 onClick = {},
